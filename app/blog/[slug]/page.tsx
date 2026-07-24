@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const url = `https://yourdomain.com/blog/${post.slug}`;
+  const url = `https://blog-press-beta.vercel.app/blog/${post.slug}`;
   const image = 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1200&q=80'; // You can make this dynamic later
 
   return {
@@ -84,7 +84,7 @@ export default async function BlogPost({ params }: Props) {
 
   const allPosts = await getAllPosts();
   const relatedPosts = allPosts.filter((p) => p.slug !== slug).slice(0, 4);
-  const shareUrl = `https://yourdomain.com/blog/${post.slug}`;
+  const shareUrl = `https://blog-press-beta.vercel.app/blog/${post.slug}`;
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
